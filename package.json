@@ -1,0 +1,36 @@
+{
+  "name": "@pcode-at/tinacms-seo",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pcode-at/tinacms-seo.git"
+  },
+  "author": "@pcode-at",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pcode-at/tinacms-seo/issues"
+  },
+  "homepage": "https://github.com/pcode-at/tinacms-seo#readme",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "semantic-release": "^19.0.2"
+  }
+}
