@@ -1,6 +1,6 @@
 {
   "name": "@pcode-at/tinacms-seo",
-  "version": "0.0.0-development",
+  "version": "1.0.0-alpha.2",
   "description": "SEO package for TinaCMS",
   "main": "index.js",
   "scripts": {
