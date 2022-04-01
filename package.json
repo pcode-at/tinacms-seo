@@ -1,7 +1,7 @@
 {
   "name": "@pcode-at/tinacms-seo",
-  "version": "0.0.0-development",
-  "description": "",
+  "version": "1.0.0-alpha.2",
+  "description": "SEO package for TinaCMS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +19,11 @@
   "homepage": "https://github.com/pcode-at/tinacms-seo#readme",
   "release": {
     "branches": [
-      "main"
+      "main",
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
