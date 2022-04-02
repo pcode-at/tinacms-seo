@@ -1,5 +1,4 @@
 import type { TinaField, TinaTemplate } from "tinacms";
-import { ObjectType } from "tinacms/dist/types";
 import { ImagePrevSize } from "next-seo/lib/types";
 
 const imagePrevSize: ImagePrevSize[] = ["none", "standard", "large"];
@@ -102,6 +101,64 @@ const article: TinaField = {
   ],
 };
 
+const video: TinaField = {
+  type: "object",
+  label: "Open Graph Video",
+  name: "video",
+  fields: [
+    {
+      type: "object",
+      label: "Actors",
+      name: "actors",
+      list: true,
+      fields: [
+        {
+          type: "string",
+          label: "Profile",
+          name: "profile",
+          required: true,
+        },
+        {
+          type: "string",
+          label: "Role",
+          name: "role",
+        },
+      ],
+    },
+    {
+      type: "string",
+      label: "Directors",
+      name: "directors",
+    },
+    {
+      type: "string",
+      label: "Writers",
+      name: "writers",
+    },
+    {
+      type: "number",
+      label: "Duration",
+      name: "duration",
+    },
+    {
+      type: "datetime",
+      label: "ReleaseDate",
+      name: "releaseDate",
+    },
+    {
+      type: "string",
+      label: "Tags",
+      name: "tags",
+      list: true,
+    },
+    {
+      type: "string",
+      label: "Series",
+      name: "series",
+    },
+  ],
+};
+
 const openGraph: TinaField = {
   type: "object",
   label: "Open Graph",
@@ -130,8 +187,84 @@ const openGraph: TinaField = {
         component: "textarea",
       },
     },
-    images,
-    videos,
+    {
+      type: "object",
+      label: "Open Graph Images",
+      name: "images",
+      list: true,
+      fields: [
+        {
+          type: "string",
+          label: "Url",
+          name: "url",
+          required: true,
+        },
+        {
+          type: "string",
+          label: "Width",
+          name: "width",
+        },
+        {
+          type: "string",
+          label: "Height",
+          name: "height",
+        },
+        {
+          type: "string",
+          label: "Alt",
+          name: "alt",
+        },
+        {
+          type: "string",
+          label: "Type",
+          name: "type",
+        },
+        {
+          type: "string",
+          label: "SecureUrl",
+          name: "secureUrl",
+        },
+      ],
+    },
+    {
+      type: "object",
+      label: "Open Graph Videos",
+      name: "videos",
+      list: true,
+      fields: [
+        {
+          type: "string",
+          label: "Url",
+          name: "url",
+          required: true,
+        },
+        {
+          type: "string",
+          label: "Width",
+          name: "width",
+        },
+        {
+          type: "string",
+          label: "Height",
+          name: "height",
+        },
+        {
+          type: "string",
+          label: "Alt",
+          name: "alt",
+        },
+        {
+          type: "string",
+          label: "Type",
+          name: "type",
+        },
+        {
+          type: "string",
+          label: "SecureUrl",
+          name: "secureUrl",
+        },
+      ],
+    },
     {
       type: "string",
       label: "DefaultImageHeight",
@@ -158,10 +291,178 @@ const openGraph: TinaField = {
     video,
   ],
 };
-const facebook: TinaField = {};
-const twitter: TinaField = {};
-const additionalMetaTags: TinaField = {};
-const additionalLinkTags: TinaField = {};
+const facebook: TinaField = {
+  type: "object",
+  label: "Mobile Alternate",
+  name: "mobileAlternate",
+  fields: [
+    {
+      type: "string",
+      label: "AppId",
+      name: "appId",
+    },
+  ],
+};
+
+const twitter: TinaField = {
+  type: "object",
+  label: "Twitter",
+  name: "twitter",
+  fields: [
+    {
+      type: "string",
+      label: "Handle",
+      name: "handle",
+    },
+    {
+      type: "string",
+      label: "Site",
+      name: "site",
+    },
+    {
+      type: "string",
+      label: "CardType",
+      name: "cardType",
+    },
+  ],
+};
+
+const HTML5MetaTag: TinaTemplate = {
+  label: "HTML5MetaTag",
+  name: "html5MetaTag",
+  fields: [
+    {
+      type: "string",
+      label: "Name",
+      name: "name",
+      required: true,
+    },
+    {
+      type: "string",
+      label: "Content",
+      name: "content",
+      required: true,
+    },
+    {
+      type: "string",
+      label: "KeyOverride",
+      name: "keyOverride",
+    },
+  ],
+};
+
+const RDFaMetaTag: TinaTemplate = {
+  label: "RDFaMetaTag",
+  name: "rdfaaMetaTag",
+  fields: [
+    {
+      type: "string",
+      label: "Property",
+      name: "property",
+      required: true,
+    },
+    {
+      type: "string",
+      label: "Content",
+      name: "content",
+      required: true,
+    },
+    {
+      type: "string",
+      label: "KeyOverride",
+      name: "keyOverride",
+    },
+  ],
+};
+
+const HTTPEquivMetaTag: TinaTemplate = {
+  label: "HTTPEquivMetaTag",
+  name: "httpEquivMetaTag",
+  fields: [
+    {
+      type: "string",
+      label: "HttpEquiv",
+      name: "httpEquiv",
+      options: [
+        "content-security-policy",
+        "content-type",
+        "default-style",
+        "x-ua-compatible",
+        "refresh",
+      ],
+    },
+    {
+      type: "string",
+      label: "Content",
+      name: "content",
+      required: true,
+    },
+    {
+      type: "string",
+      label: "KeyOverride",
+      name: "keyOverride",
+    },
+  ],
+};
+
+const additionalMetaTags: TinaField = {
+  type: "object",
+  label: "Addtional meta tags",
+  name: "addtionalMetaTags",
+  list: true,
+  templates: [HTML5MetaTag, RDFaMetaTag, HTTPEquivMetaTag],
+};
+
+const additionalLinkTags: TinaField = {
+  type: "object",
+  label: "Additional link tags",
+  name: "addtionalLinkTags",
+  list: true,
+  fields: [
+    {
+      type: "string",
+      label: "Rel",
+      name: "rel",
+      required: true,
+    },
+    {
+      type: "string",
+      label: "Href",
+      name: "href",
+      required: true,
+    },
+    {
+      type: "string",
+      label: "Sizes",
+      name: "sizes",
+    },
+    {
+      type: "string",
+      label: "Type",
+      name: "type",
+    },
+    {
+      type: "string",
+      label: "Color",
+      name: "color",
+    },
+    {
+      type: "string",
+      label: "KeyOverride",
+      name: "keyOverride",
+    },
+    {
+      type: "string",
+      label: "As",
+      name: "as",
+    },
+    {
+      type: "string",
+      label: "CrossOrigin",
+      name: "crossOrigin",
+    },
+  ],
+};
 
 const mobileAlternate: TinaField = {
   type: "object",
@@ -251,7 +552,7 @@ const robotsProps: TinaField = {
   ],
 };
 
-export const defaultSeoSchema: TinaTemplate = {
+export const defaultSeoPropsSchema: TinaTemplate = {
   name: "defaultSeo",
   label: "Default Seo",
   fields: [
@@ -314,7 +615,7 @@ export const defaultSeoSchema: TinaTemplate = {
   ],
 };
 
-export const pageSeoSchema: TinaTemplate = {
+export const nextSeoPropsSchema: TinaTemplate = {
   name: "seo",
   label: "SEO",
   fields: [
@@ -325,11 +626,13 @@ export const pageSeoSchema: TinaTemplate = {
     },
     {
       type: "string",
-      label: "Description",
-      name: "description",
-      ui: {
-        component: "textarea",
-      },
+      label: "Title Template",
+      name: "titleTemplate",
+    },
+    {
+      type: "string",
+      label: "Default Title",
+      name: "defaultTemplate",
     },
     {
       type: "boolean",
@@ -342,52 +645,25 @@ export const pageSeoSchema: TinaTemplate = {
       name: "nofollow",
     },
     robotsProps,
-  ],
-};
-
-const featureBlockSchema: TinaTemplate = {
-  name: "features",
-  label: "Features",
-  ui: {
-    previewSrc: "/blocks/features.png",
-    defaultItem: {
-      items: [defaultFeature, defaultFeature, defaultFeature],
-    },
-  },
-  fields: [
     {
-      type: "object",
-      label: "Feature Items",
-      name: "items",
-      list: true,
+      type: "string",
+      label: "Description",
+      name: "description",
       ui: {
-        defaultItem: {
-          ...defaultFeature,
-        },
+        component: "textarea",
       },
-      fields: [
-        iconSchema,
-        {
-          type: "string",
-          label: "Title",
-          name: "title",
-        },
-        {
-          type: "string",
-          label: "Text",
-          name: "text",
-        },
-      ],
     },
     {
       type: "string",
-      label: "Color",
-      name: "color",
-      options: [
-        { label: "Default", value: "default" },
-        { label: "Tint", value: "tint" },
-        { label: "Primary", value: "primary" },
-      ],
+      label: "Canonical",
+      name: "canonical",
     },
+    mobileAlternate,
+    languageAlternates,
+    openGraph,
+    facebook,
+    twitter,
+    additionalMetaTags,
+    additionalLinkTags,
   ],
 };
