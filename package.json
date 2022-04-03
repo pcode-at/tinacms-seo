@@ -2,8 +2,10 @@
   "name": "@pcode-at/tinacms-seo",
   "version": "1.0.0-alpha.2",
   "description": "SEO package for TinaCMS",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
   "scripts": {
+    "prepublish": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "semantic-release": "semantic-release"
   },
@@ -35,6 +37,11 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
+    "prettier": "2.6.1",
     "semantic-release": "19.0.2"
+  },
+  "peerDependencies": {
+    "next-seo": "^5.3.0",
+    "tinacms": "^0.66.9"
   }
 }
