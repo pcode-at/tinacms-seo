@@ -552,9 +552,10 @@ const robotsProps: TinaField = {
   ],
 };
 
-export const defaultSeoPropsSchema: TinaTemplate = {
+export const defaultSeoPageProps: TinaField = {
   name: "defaultSeo",
   label: "Default Seo",
+  type: "object",
   fields: [
     {
       type: "number",
@@ -615,9 +616,10 @@ export const defaultSeoPropsSchema: TinaTemplate = {
   ],
 };
 
-export const nextSeoPropsSchema: TinaTemplate = {
+export const seoPageProps: TinaField = {
   name: "seo",
   label: "SEO",
+  type: "object",
   fields: [
     {
       type: "string",

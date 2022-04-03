@@ -1,3 +1,3 @@
-import {defaultSeoPropsSchema, nextSeoPropsSchema} from './src/schema'
+import { defaultSeoPageProps, seoPageProps } from "./src/schema";
 
-export {defaultSeoPropsSchema, nextSeoPropsSchema};
+export { defaultSeoPageProps, seoPageProps };
