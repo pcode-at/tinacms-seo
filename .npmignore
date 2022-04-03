@@ -1,0 +1,6 @@
+.github
+.idea
+renovate.json
+*.tgz
+index.ts
+tsconfig.json
