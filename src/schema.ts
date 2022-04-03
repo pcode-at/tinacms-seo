@@ -291,10 +291,11 @@ const openGraph: TinaField = {
     video,
   ],
 };
+
 const facebook: TinaField = {
   type: "object",
-  label: "Mobile Alternate",
-  name: "mobileAlternate",
+  label: "Facebook",
+  name: "facebook",
   fields: [
     {
       type: "string",
