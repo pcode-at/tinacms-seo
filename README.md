@@ -1,7 +1,7 @@
 # TinaCMS SEO
 
 ## Mission and Vision
-This package adds SEO functionality to TinaCMS. Our vision of this package is to create the open source version of the Wordpress Plugin [Yoast](https://yoast.com/wordpress/plugins/seo/) for [TinaCMS](https://tina.io/).
+Our vision of this package is to create the one stop shop for all your SEO concerns using [TinaCMS](https://tina.io/), similar to the Wordpress Plugin [Yoast](https://yoast.com/wordpress/plugins/seo/).
 
 ## Getting started
 Follow these 5 steps to include tinacms-seo in your project:
@@ -17,8 +17,15 @@ or
 ```
 yarn add @pcode-at/tinacms-seo
 ``` 
- 
+
  depending on your package manager.
+
+**NOTE**: If you are using `yarn` (or an `npm` version that doesn't install peer dependencies automatically) then you have to install used peer dependencies by yourself manually:
+```
+yarn add next-seo
+```
+ 
+
 
 2. Import the required schema parts from the package:
 ```
