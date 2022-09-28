@@ -585,6 +585,50 @@ export const defaultSeoPageProps: TinaField = {
     },
     {
       type: "string",
+      label: "Description",
+      name: "description",
+      ui: {
+        component: "textarea",
+      },
+    },
+    openGraph,
+    facebook,
+    twitter,
+  ],
+};
+
+export const expertDefaultSeoPageProps: TinaField = {
+  name: "defaultSeo",
+  label: "Default Seo",
+  type: "object",
+  fields: [
+    {
+      type: "number",
+      label: "Open Graph Image Width",
+      name: "defaultOpenGraphImageWidth",
+    },
+    {
+      type: "number",
+      label: "Open Graph Image Height",
+      name: "defaultOpenGraphImageHeight",
+    },
+    {
+      type: "number",
+      label: "Open Graph Video Width",
+      name: "defaultOpenGraphImageWidth",
+    },
+    {
+      type: "number",
+      label: "Open Graph Video Height",
+      name: "defaultOpenGraphImageHeight",
+    },
+    {
+      type: "string",
+      label: "Title",
+      name: "title",
+    },
+    {
+      type: "string",
       label: "Title Template",
       name: "titleTemplate",
     },
@@ -618,6 +662,30 @@ export const defaultSeoPageProps: TinaField = {
 };
 
 export const seoPageProps: TinaField = {
+  name: "seo",
+  label: "SEO",
+  type: "object",
+  fields: [
+    {
+      type: "string",
+      label: "Title",
+      name: "title",
+    },
+    {
+      type: "string",
+      label: "Description",
+      name: "description",
+      ui: {
+        component: "textarea",
+      },
+    },
+    openGraph,
+    facebook,
+    twitter,
+  ],
+};
+
+export const expertSeoPageProps: TinaField = {
   name: "seo",
   label: "SEO",
   type: "object",
