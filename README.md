@@ -56,3 +56,6 @@ import { defaultSeoPageProps, seoPageProps } from "@pcode-at/tinacms-seo";
 
 ![image](https://user-images.githubusercontent.com/29887207/161561313-4bd08fc9-e82d-4e9e-bea6-379351e298dc.png)
 
+### Expert mode
+
+For usability reasons we do not expose all fields in ```defaultSeoPageProps``` and ```seoPageProps```. If you have a usecase for full control about all seo relevant fields you can import ```expertDefaultSeoPageProps``` and ```expertSeoPageProps```.
