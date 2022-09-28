@@ -1,9 +1,9 @@
 import type { TinaField, TinaTemplate } from "tinacms";
 import { ImagePrevSize } from "next-seo/lib/types";
 
-const imagePrevSize: ImagePrevSize[] = ["none", "standard", "large"];
+export const imagePrevSize: ImagePrevSize[] = ["none", "standard", "large"];
 
-const profile: TinaField = {
+export const profile: TinaField = {
   type: "object",
   label: "Open Graph Profile",
   name: "profile",
@@ -31,7 +31,7 @@ const profile: TinaField = {
   ],
 };
 
-const book: TinaField = {
+export const book: TinaField = {
   type: "object",
   label: "Open Graph Book",
   name: "book",
@@ -61,7 +61,7 @@ const book: TinaField = {
   ],
 };
 
-const article: TinaField = {
+export const article: TinaField = {
   type: "object",
   label: "Open Graph Article",
   name: "article",
@@ -101,7 +101,7 @@ const article: TinaField = {
   ],
 };
 
-const video: TinaField = {
+export const video: TinaField = {
   type: "object",
   label: "Open Graph Video",
   name: "video",
@@ -159,7 +159,7 @@ const video: TinaField = {
   ],
 };
 
-const openGraph: TinaField = {
+export const openGraph: TinaField = {
   type: "object",
   label: "Open Graph",
   name: "openGraph",
@@ -292,7 +292,7 @@ const openGraph: TinaField = {
   ],
 };
 
-const facebook: TinaField = {
+export const facebook: TinaField = {
   type: "object",
   label: "Facebook",
   name: "facebook",
@@ -305,7 +305,7 @@ const facebook: TinaField = {
   ],
 };
 
-const twitter: TinaField = {
+export const twitter: TinaField = {
   type: "object",
   label: "Twitter",
   name: "twitter",
@@ -328,7 +328,7 @@ const twitter: TinaField = {
   ],
 };
 
-const HTML5MetaTag: TinaTemplate = {
+export const HTML5MetaTag: TinaTemplate = {
   label: "HTML5MetaTag",
   name: "html5MetaTag",
   fields: [
@@ -352,7 +352,7 @@ const HTML5MetaTag: TinaTemplate = {
   ],
 };
 
-const RDFaMetaTag: TinaTemplate = {
+export const RDFaMetaTag: TinaTemplate = {
   label: "RDFaMetaTag",
   name: "rdfaaMetaTag",
   fields: [
@@ -376,7 +376,7 @@ const RDFaMetaTag: TinaTemplate = {
   ],
 };
 
-const HTTPEquivMetaTag: TinaTemplate = {
+export const HTTPEquivMetaTag: TinaTemplate = {
   label: "HTTPEquivMetaTag",
   name: "httpEquivMetaTag",
   fields: [
@@ -406,7 +406,7 @@ const HTTPEquivMetaTag: TinaTemplate = {
   ],
 };
 
-const additionalMetaTags: TinaField = {
+export const additionalMetaTags: TinaField = {
   type: "object",
   label: "Addtional meta tags",
   name: "addtionalMetaTags",
@@ -414,7 +414,7 @@ const additionalMetaTags: TinaField = {
   templates: [HTML5MetaTag, RDFaMetaTag, HTTPEquivMetaTag],
 };
 
-const additionalLinkTags: TinaField = {
+export const additionalLinkTags: TinaField = {
   type: "object",
   label: "Additional link tags",
   name: "addtionalLinkTags",
@@ -465,7 +465,7 @@ const additionalLinkTags: TinaField = {
   ],
 };
 
-const mobileAlternate: TinaField = {
+export const mobileAlternate: TinaField = {
   type: "object",
   label: "Mobile Alternate",
   name: "mobileAlternate",
@@ -483,7 +483,7 @@ const mobileAlternate: TinaField = {
   ],
 };
 
-const languageAlternates: TinaField = {
+export const languageAlternates: TinaField = {
   type: "object",
   label: "Language Alternates",
   name: "languageAlternates",
@@ -502,7 +502,7 @@ const languageAlternates: TinaField = {
   ],
 };
 
-const robotsProps: TinaField = {
+export const robotsProps: TinaField = {
   type: "object",
   label: "robotsProps",
   name: "robotsProps",
