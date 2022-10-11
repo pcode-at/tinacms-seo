@@ -127,11 +127,13 @@ export const video: TinaField = {
     },
     {
       type: "string",
+      list: true,
       label: "Directors",
       name: "directors",
     },
     {
       type: "string",
+      list: true,
       label: "Writers",
       name: "writers",
     },
@@ -200,12 +202,12 @@ export const openGraph: TinaField = {
           required: true,
         },
         {
-          type: "string",
+          type: "number",
           label: "Width",
           name: "width",
         },
         {
-          type: "string",
+          type: "number",
           label: "Height",
           name: "height",
         },
@@ -239,12 +241,12 @@ export const openGraph: TinaField = {
           required: true,
         },
         {
-          type: "string",
+          type: "number",
           label: "Width",
           name: "width",
         },
         {
-          type: "string",
+          type: "number",
           label: "Height",
           name: "height",
         },
@@ -266,12 +268,12 @@ export const openGraph: TinaField = {
       ],
     },
     {
-      type: "string",
+      type: "number",
       label: "DefaultImageHeight",
       name: "defaultImageHeight",
     },
     {
-      type: "string",
+      type: "number",
       label: "DefaultImageWidth",
       name: "defaultImageWidth",
     },
@@ -301,6 +303,7 @@ export const facebook: TinaField = {
       type: "string",
       label: "AppId",
       name: "appId",
+      required: true,
     },
   ],
 };
@@ -408,8 +411,8 @@ export const HTTPEquivMetaTag: TinaTemplate = {
 
 export const additionalMetaTags: TinaField = {
   type: "object",
-  label: "Addtional meta tags",
-  name: "addtionalMetaTags",
+  label: "Additional meta tags",
+  name: "additionalMetaTags",
   list: true,
   templates: [HTML5MetaTag, RDFaMetaTag, HTTPEquivMetaTag],
 };
@@ -417,7 +420,7 @@ export const additionalMetaTags: TinaField = {
 export const additionalLinkTags: TinaField = {
   type: "object",
   label: "Additional link tags",
-  name: "addtionalLinkTags",
+  name: "additionalLinkTags",
   list: true,
   fields: [
     {
@@ -521,7 +524,6 @@ export const robotsProps: TinaField = {
       type: "string",
       label: "MaxImagePreview",
       name: "maxImagePreview",
-      list: true,
       options: imagePrevSize,
     },
     {
