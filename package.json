@@ -42,6 +42,20 @@
       ],
       "@semantic-release/release-notes-generator",
       [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md"
+          ]
+        }
+      ],
+      [
         "@amanda-mitchell/semantic-release-npm-multiple",
         {
           "registries": {
@@ -50,7 +64,6 @@
           }
         }
       ],
-      "@semantic-release/changelog",
       "@semantic-release/github"
     ]
   },
