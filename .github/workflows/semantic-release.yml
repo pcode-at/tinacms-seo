@@ -30,6 +30,7 @@ jobs:
             ]
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_NPM_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_NPM_CONFIG_REGISTRY: https://npm.pkg.github.com/
           PUBLIC_NPM_CONFIG_REGISTRY: https://registry.npmjs.org
