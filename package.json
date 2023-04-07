@@ -30,12 +30,22 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
+      [
+        "@amanda-mitchell/semantic-release-npm-multiple",
+        {
+          "registries": {
+            "github": {},
+            "public": {}
+          }
+        }
+      ],
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/github"
     ]
   },
   "devDependencies": {
+    "@amanda-mitchell/semantic-release-npm-multiple": "3.8.0",
     "@semantic-release/changelog": "6.0.1",
     "prettier": "2.7.1",
     "semantic-release": "19.0.5"
