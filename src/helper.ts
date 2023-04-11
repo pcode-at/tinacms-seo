@@ -7,7 +7,7 @@ export function getNextSeoProps(tinaCmsSeoPageProps: any): NextSeoProps {
     ...tinaCmsSeoPageProps,
     facebook: {
       appId:
-        tinaCmsSeoPageProps.facebook[
+        tinaCmsSeoPageProps?.facebook?.[
           CUSTOM_FACEBOOK_FIELD_REQUIRED_APP_ID_NAME
         ],
     },
