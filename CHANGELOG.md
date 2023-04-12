@@ -1,3 +1,25 @@
+# [2.0.0](https://github.com/pcode-at/tinacms-seo/compare/v1.4.4...v2.0.0) (2023-04-12)
+
+
+### Bug Fixes
+
+* handle null or undefined case ([07ce0f9](https://github.com/pcode-at/tinacms-seo/commit/07ce0f9f7e6324987b98ea1fd26cf7423c926c9c)), closes [#47](https://github.com/pcode-at/tinacms-seo/issues/47)
+
+
+### chore
+
+* update dependencies ([4f0ed3a](https://github.com/pcode-at/tinacms-seo/commit/4f0ed3ae50e069046bcb7b970ca4c19dd71506ad))
+
+
+### Features
+
+* getNextSeoProps helper ([366a31d](https://github.com/pcode-at/tinacms-seo/commit/366a31dacbac8e33737411bf5b3bb19fef42d23e)), closes [#47](https://github.com/pcode-at/tinacms-seo/issues/47)
+
+
+### BREAKING CHANGES
+
+* #47
+
 ## [1.4.4](https://github.com/pcode-at/tinacms-seo/compare/v1.4.3...v1.4.4) (2023-04-07)
 
 
