@@ -51,7 +51,8 @@
         "@semantic-release/git",
         {
           "assets": [
-            "CHANGELOG.md"
+            "CHANGELOG.md",
+            "package.json"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
@@ -76,7 +77,7 @@
     "semantic-release": "19.0.5"
   },
   "peerDependencies": {
-    "next-seo": "^5.3.0",
-    "tinacms": "^0.66.9 || ^0.67.0 || ^0.69.0"
+    "next-seo": "6.0.0",
+    "tinacms": "1.4.3"
   }
 }

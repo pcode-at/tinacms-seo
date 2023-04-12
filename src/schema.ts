@@ -1,7 +1,8 @@
-import type { TinaField, TinaTemplate } from "tinacms";
+import type { TinaField, Template } from "tinacms";
 import { ImagePrevSize } from "next-seo/lib/types";
 
 export const imagePrevSize: ImagePrevSize[] = ["none", "standard", "large"];
+export const CUSTOM_FACEBOOK_FIELD_REQUIRED_APP_ID_NAME = "requiredAppId";
 
 export const profile: TinaField = {
   type: "object",
@@ -129,11 +130,13 @@ export const video: TinaField = {
       type: "string",
       label: "Directors",
       name: "directors",
+      list: true,
     },
     {
       type: "string",
       label: "Writers",
       name: "writers",
+      list: true,
     },
     {
       type: "number",
@@ -200,12 +203,12 @@ export const openGraph: TinaField = {
           required: true,
         },
         {
-          type: "string",
+          type: "number",
           label: "Width",
           name: "width",
         },
         {
-          type: "string",
+          type: "number",
           label: "Height",
           name: "height",
         },
@@ -239,12 +242,12 @@ export const openGraph: TinaField = {
           required: true,
         },
         {
-          type: "string",
+          type: "number",
           label: "Width",
           name: "width",
         },
         {
-          type: "string",
+          type: "number",
           label: "Height",
           name: "height",
         },
@@ -266,12 +269,12 @@ export const openGraph: TinaField = {
       ],
     },
     {
-      type: "string",
+      type: "number",
       label: "DefaultImageHeight",
       name: "defaultImageHeight",
     },
     {
-      type: "string",
+      type: "number",
       label: "DefaultImageWidth",
       name: "defaultImageWidth",
     },
@@ -300,7 +303,9 @@ export const facebook: TinaField = {
     {
       type: "string",
       label: "AppId",
-      name: "appId",
+      // reason why we prefix required fields with "required" --> https://github.com/tinacms/tinacms/issues/3150#issuecomment-1243908701
+      name: CUSTOM_FACEBOOK_FIELD_REQUIRED_APP_ID_NAME,
+      required: true,
     },
   ],
 };
@@ -328,7 +333,7 @@ export const twitter: TinaField = {
   ],
 };
 
-export const HTML5MetaTag: TinaTemplate = {
+export const HTML5MetaTag: Template = {
   label: "HTML5MetaTag",
   name: "html5MetaTag",
   fields: [
@@ -352,7 +357,7 @@ export const HTML5MetaTag: TinaTemplate = {
   ],
 };
 
-export const RDFaMetaTag: TinaTemplate = {
+export const RDFaMetaTag: Template = {
   label: "RDFaMetaTag",
   name: "rdfaaMetaTag",
   fields: [
@@ -376,7 +381,7 @@ export const RDFaMetaTag: TinaTemplate = {
   ],
 };
 
-export const HTTPEquivMetaTag: TinaTemplate = {
+export const HTTPEquivMetaTag: Template = {
   label: "HTTPEquivMetaTag",
   name: "httpEquivMetaTag",
   fields: [
