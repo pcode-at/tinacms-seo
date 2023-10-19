@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # this is needed because: https://github.com/semantic-release/github/issues/175#issuecomment-1122569317
           token: ${{ secrets.GH_TOKEN }}
