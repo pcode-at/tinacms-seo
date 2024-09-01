@@ -77,7 +77,7 @@
     "semantic-release": "19.0.5"
   },
   "peerDependencies": {
-    "next-seo": "6.0.0",
+    "next-seo": "6.6.0",
     "tinacms": "1.4.3"
   }
 }
